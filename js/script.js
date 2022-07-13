@@ -110,7 +110,7 @@ const set = setTimeout(() => {
       
     }
   }, 1);
-}, 100); // 1000
+}, 1000);
 
 function app() {
   const body_mas =
@@ -212,7 +212,7 @@ function Photofoot() {
   setTimeout(() => {
     addArray();
     process = true;
-  }, 850); // 8500 bylo
+  }, 8500); 
 }
 
 
@@ -309,17 +309,4 @@ function scrollDown() {
     wrap.scrollTop(desiredHeight);
   }
 }
-
-/* function ValidPhone() {
-  var re = /^[+][0-9]{3} [0-9]{2} [0-9]{3} [0-9]{4}$/;
-  var myPhone = document.getElementById('input-phone').value;
-  var valid = re.test(myPhone);
-  if (valid) {
-    output = 'Номер телефона введен правильно!';
-  } 
-  else {
-    $('.form__warning_message').style.display = 'block';
-  } 
-  return valid;
-}   */
 
