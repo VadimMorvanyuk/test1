@@ -106,6 +106,7 @@ const set = setTimeout(() => {
         scrollDown();
         clearInterval(set);
         showForm();
+        getprop();
       }
       
     }
@@ -318,5 +319,38 @@ let button = document.querySelector('.glow-button').addEventListener('click', ()
   })
 })
 
-  
+function getprop(result){
+  let text = document.querySelectorAll('.chat-content-desc-item.user'),
+  result = [];
+  for (let i = 0; i < text.length; i++){
+    result.push(text[i].textContent);
+  }
+  return result;
+}
+
+function myFunction(){
+  let text = document.querySelectorAll('.chat-content-desc-item.user');
+  let result = [];
+  for (let i = 0; i < text.length; i++){
+    result.push(text[i].textContent);
+  }
+  let elements = document.getElementsByClassName("input-roulette");
+  let formData = new FormData(); 
+    for(let i=0; i<elements.length; i++)
+    {
+        formData.append(elements[i].name, elements[i].value, result);
+    }
+    let xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function()
+        {
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            {
+                alert(xmlHttp.responseText);
+            }
+        }
+        xmlHttp.open("post", "back.php"); 
+        xmlHttp.send(formData);
+}
+
+
 
