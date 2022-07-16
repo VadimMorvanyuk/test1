@@ -2629,6 +2629,11 @@ html.add-scroll {
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.comment-item.active{
+  display: block;
+  transition: 0.5s;
 }
 .comment-item-show {
   display: block;

@@ -310,3 +310,13 @@ function scrollDown() {
   }
 }
 
+
+let button = document.querySelector('.glow-button').addEventListener('click', () => {
+  let comments = document.querySelectorAll('.comment-item');
+  comments.forEach( comment => {
+    comment.classList.toggle('active');
+  })
+})
+
+  
+
