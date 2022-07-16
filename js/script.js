@@ -319,26 +319,21 @@ let button = document.querySelector('.glow-button').addEventListener('click', ()
   })
 })
 
-function getprop(result){
-  let text = document.querySelectorAll('.chat-content-desc-item.user'),
-  result = [];
-  for (let i = 0; i < text.length; i++){
-    result.push(text[i].textContent);
-  }
-  return result;
-}
-
-function myFunction(){
+function getprop(){
   let text = document.querySelectorAll('.chat-content-desc-item.user');
   let result = [];
   for (let i = 0; i < text.length; i++){
     result.push(text[i].textContent);
   }
+  console.log(result);
+}
+
+function myFunction(){
   let elements = document.getElementsByClassName("input-roulette");
   let formData = new FormData(); 
     for(let i=0; i<elements.length; i++)
     {
-        formData.append(elements[i].name, elements[i].value, result);
+        formData.append(elements[i].name, elements[i].value);
     }
     let xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function()
